@@ -38,17 +38,6 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
         return new ViewHolder(view);  // Devolver un ViewHolder que contiene la vista inflada
     }
 
-    // Método que coloca la imagen correcta en la vista creada para cada elemento
-    @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        // Obtener la URI de la imagen en la posición actual de la lista
-        Uri imageUri = imageUriList.get(position);
-
-        // Utilizar la librería Glide para cargar la imagen desde la URI en el ImageView de la vista
-        Glide.with(context)
-                .load(imageUri)  // Cargar la imagen usando la URI
-                .into(holder.imageView);  // Colocar la imagen en el ImageView dentro del ViewHolder
-    }
 
     // Método que devuelve la cantidad total de imágenes en la lista
     @Override
